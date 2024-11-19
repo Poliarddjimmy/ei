@@ -1,2 +1,6 @@
 @import './menu.css';
 @import './main.css';
+
+.cursor-pointer {
+  cursor: pointer;
+}

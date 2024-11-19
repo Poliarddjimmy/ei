@@ -57,18 +57,18 @@
                 <div class="my-info">
                     <div class="in1">
                         <div class="address">
-                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 95 South Park Ave.</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> Bradenton, USA</p>
                         </div>
                         <div class="email">
-                            <p><i class="fa fa-envelope" aria-hidden="true"></i> info@blanca.com</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:experienceinoubliable@gmail.com">experienceinoubliable@gmail.com</a></p>
                         </div>
                     </div>
                     <div class="in1">
                         <div class="phone">
-                            <p><i class="fa fa-phone" aria-hidden="true"></i> (234) 0200 17813</p>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> +1 941 877-4753</p>
                         </div>
                         <div class="whatssap">
-                            <p><i class="fa fa-whatsapp" aria-hidden="true"></i> (234) 0200 17813</p>
+                            <p><i class="fa fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/19418774753" target="_blank">+1 942 877-4753</a></p>
                         </div>
                     </div>
                 </div>
@@ -80,12 +80,7 @@
 
 <!-- START SECTION GOOGLE MAP -->
 <div id="contact-map" class="map-area">
-    <div id="googleMap" style="width:100%;height:500px;"></div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d226519.3402654993!2d-82.75210337295452!3d27.489031440396058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c3164fdea682f1%3A0xfa9d3b7d4ef1fd5a!2sBradenton%2C%20FL!5e0!3m2!1sen!2sus!4v1732030087198!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<!-- END SECTION GOOGLE MAP -->
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8kOYB_m_UPPC2xnEd7ddYKww8jO1819k"></script>
-<script src="{{ asset('/assets/js/map.js') }}"></script>
 
 @endsection

@@ -3,17 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Project;
 
 class MainController extends Controller
 {
     public function welcome()
     {
-        return view('welcome');
+        $projects = Project::all();
+        $rProjects = Project::orderBy('created_at', 'desc')->inRandomOrder()->take(5)->get();
+        return view('welcome', compact('projects', 'rProjects'));
     }
     
     public function about()
     {
-        return view('about');
+        $services = Category::all();
+        return view('about', compact('services'));
     }
     
     public function contact()
@@ -23,7 +28,8 @@ class MainController extends Controller
     
     public function services()
     {
-        return view('services.index');
+        $services = Category::all();
+        return view('services.index', compact('services'));
     }
     
     public function projects()

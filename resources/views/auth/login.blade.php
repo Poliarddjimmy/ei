@@ -27,7 +27,7 @@
             <h2>LOGIN TO YOUR DASHBOARD</h2>
         </div>
         <div class="row">
-            <div class="col-md-12 col-lg-6">
+            <div class="col-md-12 col-lg-4">
                 <form id="contactform" class="contact-form" name="contactform" method="post" action="{{ route('login') }}" novalidate>
                     @csrf
                     <div id="success" class="successform">

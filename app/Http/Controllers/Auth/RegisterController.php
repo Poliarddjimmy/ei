@@ -28,7 +28,10 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+     protected function authenticated($request, $user)
+     {
+         return redirect()->intended('dashboard');
+     }
 
     /**
      * Create a new controller instance.

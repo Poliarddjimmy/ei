@@ -12,6 +12,9 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    
+    
+    <link rel="shortcut icon" href="{{ asset('/assets/images/favicon.png') }}" />
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="{{ asset('/assets/css/fontawesome-all.min.css') }}">
@@ -50,7 +53,7 @@
                     <div class="left-side">
                         <!-- Logo -->
                         <div id="logo" class="col-lg-2 logo-white">
-                            <a href="{{ route('welcome') }}"><img src="/assets/images/logo-heard.png" data-sticky-logo="/assets/images/logo-heard.png" alt=""></a>
+                            <a href="{{ route('welcome') }}"><img src="{{ asset('/assets/images/logo-heard.png') }}" data-sticky-logo="{{ asset('/assets/images/logo-heard.png') }}" alt=""></a>
                         </div>
                         <!-- Mobile Navigation -->
                         <div class="mmenu-trigger">
@@ -64,21 +67,12 @@
                         <nav id="navigation" class="style-1">
                             <ul id="responsive">
                                 <li><a href="{{ route('welcome') }}" class="{{ $routeName == 'welcome' ? 'current' : null }}">Home</a></li>
-                                <li><a href="{{ route('projects') }}" class="{{ $routeName == 'projects' ? 'current' : null }}">Projects</a></li>
-                                <li><a href="{{ route('services') }}" class="{{ $routeName == 'services' ? 'current' : null }}">Services</a>
+                                <li><a href="{{ route('projects') }}" class="{{ str_contains($routeName, 'projects') ? 'current' : null }}">Projects</a></li>
+                                <li><a href="{{ route('services') }}" class="{{ str_contains($routeName, 'services') ? 'current' : null }}">Services</a>
                                     <ul>
-                                        <li><a href="all-services.html">All Services</a>
-                                        </li>
-                                        <li><a href="residental-interior.html">Residential Interior</a>
-                                        </li>
-                                        <li><a href="commercial-interior.html">Commercial Interior</a>
-                                        </li>
-                                        <li><a href="office-interior.html">Office Interior</a>
-                                        </li>
-                                        <li><a href="hospitality-design.html">Hospitality Design</a>
-                                        </li>
-                                        <li><a href="modern-furniture.html">Modern Furniture</a>
-                                        </li>
+                                        @foreach (getServices() as $service)
+                                            <li><a href="{{ route('services', $service->slug) }}">{{ str_limit($service->name, 20) }}</a></li>
+                                        @endforeach
                                     </ul>
                                 </li>
                                 <li><a href="{{ route('about') }}" class="{{ $routeName == 'about' ? 'current' : null }}">About Us</a></li>
@@ -116,28 +110,26 @@
                                 <a href="" class="logo">
                                     <img src="{{ asset('/assets/images/logo.png') }}" alt="netcom">
                                 </a>
-    
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum incidunt architecto
-                                    soluta laborios.</p>
+                                <!-- <p>Experience Inoubliable creates unforgettable moments with exceptional decor and personalized service, turning your vision into cherished memories.</p> -->
                             </div>
                             <div class="contactus">
                                 <ul>
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <p class="in-p">95 South Park Avenue, USA</p>
+                                            <p class="in-p">Bradenton, USA</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
-                                            <p class="in-p">+456 875 369 208</p>
+                                            <p class="in-p">+1 941 877-4753</p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="info">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <p class="in-p ti">support@interior.com</p>
+                                            <p class="in-p ti"><a href="mailto:experienceinoubliable@gmail.com">experienceinoubliable@gmail.com</a></p>
                                         </div>
                                     </li>
                                 </ul>
@@ -148,87 +140,27 @@
                                 <h3>Navigation</h3>
                                 <div class="nav-footer">
                                     <ul>
-                                        <li><a href="">Home One</a></li>
-                                        <li><a
-                                                href="">Properties
-                                                Right</a></li>
-                                        <li><a href="">Properties
-                                                List</a></li>
-                                        <li><a href="">Property
-                                                Details</a></li>
-                                        <li class="no-mgb"><a
-                                                href="">Agents
-                                                Listing</a></li>
+                                        <li><a href="{{ route('welcome') }}">Home</a></li>
+                                        <li><a href="{{ route('projects') }}">Projects</a></li>
+                                        <li><a href="{{ route('services') }}">Services</a>
                                     </ul>
                                     <ul class="nav-right">
-                                        <li><a href="">Agents
-                                                Details</a></li>
-                                        <li><a href="">About Us</a></li>
-                                        <li><a href="">Blog Default</a>
-                                        </li>
-                                        <li><a href="">Blog
-                                                Details</a></li>
-                                        <li class="no-mgb"><a
-                                                href="">Contact
-                                                Us</a></li>
+                                        <li><a href="{{ route('about') }}">About</a></li>
+                                        <li><a href="{{ route('contact') }}">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="widget">
-                                <h3>Twitter Feeds</h3>
-                                <div class="twitter-widget contuct">
-                                    <div class="twitter-area">
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a
-                                                        href="#">@interior</a>
-                                                    all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a
-                                                        href="#">@interior</a>
-                                                    all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                        <div class="single-item">
-                                            <div class="icon-holder">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </div>
-                                            <div class="text">
-                                                <h5><a
-                                                        href="#">@interior</a>
-                                                    all share them with me baby said inspet.</h5>
-                                                <h4>about 5 days ago</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-6 col-md-6">
                             <div class="newsletters">
                                 <h3>Newsletters</h3>
-                                <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive
-                                    news in your inbox.</p>
+                                <p>Sign Up for Our Newsletter to get Latest Updates and Offers. Subscribe to receive news in your inbox.</p>
                             </div>
                             <form class="bloq-email mailchimp form-inline" method="post">
                                 <label for="subscribeEmail" class="error"></label>
-                                <div class="email">
-                                    <input type="email" id="subscribeEmail" name="EMAIL" placeholder="Enter Your Email">
-                                    <input type="submit" value="Subscribe">
-                                    <p class="subscription-success"></p>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Enter Your Email" aria-describedby="button-addon2">
+                                    <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
                                 </div>
                             </form>
                         </div>

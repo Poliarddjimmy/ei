@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Experience inoubliable'),
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +168,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
+        Torann\LaravelMetaTags\MetaTagsServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -183,6 +185,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
+        'MetaTag'   => Torann\LaravelMetaTags\Facades\MetaTag::class,
     ])->toArray(),
 
 ];

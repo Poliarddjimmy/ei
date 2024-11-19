@@ -4,8 +4,70 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5e587af66df05d6a57013c70a6458f4",
+    "content-hash": "fbbc387bc2478703aaac20402f244048",
     "packages": [
+        {
+            "name": "brian2694/laravel-toastr",
+            "version": "5.59",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brian2694/laravel-toastr.git",
+                "reference": "60f90a7b25973549c3992b3dc5965d4f0e27838c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brian2694/laravel-toastr/zipball/60f90a7b25973549c3992b3dc5965d4f0e27838c",
+                "reference": "60f90a7b25973549c3992b3dc5965d4f0e27838c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": ">=5.2.7",
+                "illuminate/support": ">=5.2.7",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Brian2694\\Toastr\\ToastrServiceProvider"
+                    ],
+                    "aliases": {
+                        "Toastr": "Brian2694\\Toastr\\Facades\\Toastr"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ],
+                "psr-4": {
+                    "Brian2694\\Toastr\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "brian2694",
+                    "email": "briansanchez2694@gmail.com"
+                }
+            ],
+            "description": "toastr.js for Laravel",
+            "homepage": "https://github.com/brian2694/laravel-toastr",
+            "keywords": [
+                "laravel",
+                "notification",
+                "php",
+                "toastr"
+            ],
+            "support": {
+                "issues": "https://github.com/brian2694/laravel-toastr/issues",
+                "source": "https://github.com/brian2694/laravel-toastr/tree/5.59"
+            },
+            "time": "2024-01-02T16:03:28+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.1",
@@ -209,6 +271,77 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.2"
             },
             "time": "2022-10-27T11:44:00+00:00"
+        },
+        {
+            "name": "diglactic/laravel-breadcrumbs",
+            "version": "v9.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/diglactic/laravel-breadcrumbs.git",
+                "reference": "88e8f01e013e811215770e27b40a74014c28f2c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/diglactic/laravel-breadcrumbs/zipball/88e8f01e013e811215770e27b40a74014c28f2c4",
+                "reference": "88e8f01e013e811215770e27b40a74014c28f2c4",
+                "shasum": ""
+            },
+            "require": {
+                "facade/ignition-contracts": "^1.0",
+                "laravel/framework": "^8.0 || ^9.0 || ^10.0 || ^11.0",
+                "php": "^7.3 || ^8.0"
+            },
+            "conflict": {
+                "davejamesmiller/laravel-breadcrumbs": "*"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "php-coveralls/php-coveralls": "^2.7",
+                "phpunit/phpunit": "^9.5 || ^10.5",
+                "spatie/phpunit-snapshot-assertions": "^4.2 || ^5.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Diglactic\\Breadcrumbs\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Breadcrumbs": "Diglactic\\Breadcrumbs\\Breadcrumbs"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Diglactic\\Breadcrumbs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sheng Slogar",
+                    "email": "sheng@diglactic.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Dave James Miller",
+                    "email": "dave@davejamesmiller.com",
+                    "role": "Original Creator"
+                }
+            ],
+            "description": "A simple Laravel-style way to create breadcrumbs.",
+            "homepage": "https://github.com/diglactic/laravel-breadcrumbs",
+            "keywords": [
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/diglactic/laravel-breadcrumbs/issues",
+                "source": "https://github.com/diglactic/laravel-breadcrumbs/tree/v9.0.0"
+            },
+            "time": "2024-03-12T00:42:39+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -505,6 +638,59 @@
                 }
             ],
             "time": "2023-10-06T06:47:41+00:00"
+        },
+        {
+            "name": "facade/ignition-contracts",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/facade/ignition-contracts.git",
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/facade/ignition-contracts/zipball/3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^v2.15.8",
+                "phpunit/phpunit": "^9.3.11",
+                "vimeo/psalm": "^3.17.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Facade\\IgnitionContracts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://flareapp.io",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Solution contracts for Ignition",
+            "homepage": "https://github.com/facade/ignition-contracts",
+            "keywords": [
+                "contracts",
+                "flare",
+                "ignition"
+            ],
+            "support": {
+                "issues": "https://github.com/facade/ignition-contracts/issues",
+                "source": "https://github.com/facade/ignition-contracts/tree/1.0.2"
+            },
+            "time": "2020-10-16T08:27:54+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -1256,6 +1442,63 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2024-06-21T10:06:42+00:00"
+        },
+        {
+            "name": "laravel/helpers",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/helpers.git",
+                "reference": "6caaa242a23bc39b4e3cf57304b5409260a7a346"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/helpers/zipball/6caaa242a23bc39b4e3cf57304b5409260a7a346",
+                "reference": "6caaa242a23bc39b4e3cf57304b5409260a7a346",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+                "php": "^7.2.0|^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^7.0|^8.0|^9.0|^10.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Dries Vints",
+                    "email": "dries@laravel.com"
+                }
+            ],
+            "description": "Provides backwards compatibility for helpers in the latest Laravel release.",
+            "keywords": [
+                "helpers",
+                "laravel"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/helpers/tree/v1.7.0"
+            },
+            "time": "2023-11-30T14:09:05+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -5521,6 +5764,74 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.2.7"
             },
             "time": "2023-12-08T13:03:43+00:00"
+        },
+        {
+            "name": "torann/laravel-meta-tags",
+            "version": "3.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Torann/laravel-meta-tags.git",
+                "reference": "bd6ad602c3ea05f427e5f62ea65649a6ae0be6c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Torann/laravel-meta-tags/zipball/bd6ad602c3ea05f427e5f62ea65649a6ae0be6c9",
+                "reference": "bd6ad602c3ea05f427e5f62ea65649a6ae0be6c9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": ">=5.1",
+                "illuminate/support": ">=5.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.4",
+                "phpstan/phpstan": "^0.12.14",
+                "phpunit/phpunit": "~5.0",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Torann\\LaravelMetaTags\\MetaTagsServiceProvider"
+                    ],
+                    "aliases": {
+                        "MetaTag": "Torann\\LaravelMetaTags\\Facades\\MetaTag"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Torann\\LaravelMetaTags\\": "src/Torann/LaravelMetaTags/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lito",
+                    "email": "lito@eordes.com"
+                },
+                {
+                    "name": "Daniel Stainback",
+                    "email": "daniel@lyften.com"
+                }
+            ],
+            "description": "A package to manage Header Meta Tags",
+            "keywords": [
+                "head",
+                "laravel",
+                "meta",
+                "meta tags",
+                "tags"
+            ],
+            "support": {
+                "source": "https://github.com/Torann/laravel-meta-tags/tree/3.0.9"
+            },
+            "time": "2021-02-23T14:38:25+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

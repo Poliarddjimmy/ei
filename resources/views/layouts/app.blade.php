@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('/assets/css/lightcase.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/css/owl.carousel.min.css') }}">
     <link href="{{ asset('/assets/css/menu.css') }}" rel="stylesheet">
+    
     <!-- <link rel="stylesheet" href="{{ asset('/assets/css/main-styles.css') }}"> -->
     
     <!-- Scripts -->

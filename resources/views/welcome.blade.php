@@ -34,7 +34,7 @@
         <div class="portfolio right-slider">
             <div class="owl-carousel home5-right-slider">
                 @foreach($projects as $project)
-                    <a href="project-details" class="recent-16" data-aos="fade-up">
+                    <a href="{{ route('projects.show', $project) }}" class="recent-16" data-aos="fade-up">
                         <div class="recent-img16 img-center" style="background-image: url({{ asset('/storage/'.$project->poster_url) }});"></div>
                         <div class="recent-content"></div>
                         <div class="recent-details">

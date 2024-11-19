@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     
     
-    <link rel="shortcut icon" href="{{ asset('/assets/images/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('/assets/images/favicon/favicon.ico') }}" />
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="{{ asset('/assets/css/fontawesome-all.min.css') }}">

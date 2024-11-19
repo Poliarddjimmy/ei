@@ -11,7 +11,7 @@
     <title>{{ config('app.name', 'LBB') }} | {{ MetaTag::get('title') }}</title>
 
     {!! MetaTag::tag('description') !!}
-    {!! MetaTag::tag('/favicon/apple-touch-icon.png') !!}
+    {!! MetaTag::tag('/assets/images/favicon/apple-touch-icon.png') !!}
 
     {!! MetaTag::tag('site_name', config('app.name', 'Experience inoubliable')) !!}
     {!! MetaTag::tag('url', Request::url()) !!}
@@ -21,12 +21,14 @@
     {!! MetaTag::twitterCard() !!}
 
     {{--Set default share picture after custom section pictures--}}
-    {!! MetaTag::tag('image', MetaTag::get('image') || asset('/favicon/apple-touch-icon.png')) !!}
+    {!! MetaTag::tag('image', MetaTag::get('image') || asset('/assets/images/favicon/apple-touch-icon.png')) !!}
+    
+    <link rel="shortcut icon" href="{{ asset('/assets/images/favicon/favicon.ico') }}" />
 
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/assets/images/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/assets/images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/images/favicon/favicon-16x16.png') }}">
 
     <link rel="manifest" href="{{ asset('/favicons/manifest.json') }}">
 

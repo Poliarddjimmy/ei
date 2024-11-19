@@ -16,8 +16,8 @@
                             <p class="mt-4">Our experience ensures that your projects will be done right and
                                 with the upmost professionalism.</p>
                         </div>
-                        <a href="#" class="btn btn-default btn-theme-colored2 btn-xl mt-5">Read More</a>
-                        <a href="#" class="btn btn-dark btn-theme-colored btn-xl mt-5">Contact Us</a>
+                        <a href="{{ route('about') }}" class="btn btn-default btn-theme-colored2 btn-xl mt-5">Read More</a>
+                        <a href="{{ route(name: 'contact') }}" class="btn btn-dark btn-theme-colored btn-xl mt-5">Contact Us</a>
                     </div>
                 </div>
             </div>

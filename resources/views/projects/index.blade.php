@@ -9,7 +9,7 @@
         <div class="filters-group">
             <ul>
                 <li class="active" data-filter="*">Show All</li>
-                @foreach (getServices() as $service)
+                @foreach (\App\Models\Category::has('projects')->get() as $service)
                     <li data-filter=".{{ $service->slug }}">{{ $service->name }}</li>
                 @endforeach
             </ul>

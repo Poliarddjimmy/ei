@@ -72,7 +72,7 @@
                                 <li><a href="{{ route('services') }}" class="{{ str_contains($routeName, 'services') ? 'current' : null }}">Services</a>
                                     <ul>
                                         @foreach (getServices() as $service)
-                                            <li><a href="{{ route('services', $service->slug) }}">{{ str_limit($service->name, 20) }}</a></li>
+                                            <li><a href="{{ route('services.show', $service->slug) }}">{{ str_limit($service->name, 20) }}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>

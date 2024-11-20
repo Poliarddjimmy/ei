@@ -87,7 +87,7 @@
                     
                     <!-- Right Side Content -->
                     <div class="right-side">
-                        <a href="#" class="btn btn-dark btn-theme-colored btn-xl">Get a Quote</a>
+                        <a href="{{ route('contact') }}" class="btn btn-dark btn-theme-colored btn-xl">Get a Quote</a>
                     </div>
 
                 </div>

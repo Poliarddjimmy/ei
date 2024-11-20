@@ -18,8 +18,9 @@ class ProjectController extends Controller
         if(\Route::currentRouteName() == "dashboard.projects" ) {
             $projects = Project::paginate(10);
             $categories = Category::all();
+            $tags = Category::pluck('tags')->flatten()->all();
     
-            return view('dashboard.projects.index', compact('projects', 'categories'));
+            return view('dashboard.projects.index', compact('projects', 'categories', 'tags'));
         } else {
             $projects = Project::all();
             return view('projects.index', compact('projects'));

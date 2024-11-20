@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\MainController::Class, 'welcome'])->name('welcome');
 Route::get('/about', [App\Http\Controllers\MainController::Class, 'about'])->name('about');
 Route::get('/contact', [App\Http\Controllers\MainController::Class, 'contact'])->name('contact');
+Route::get('/tags-from-category', [App\Http\Controllers\MainController::Class, 'tagsFromCategory'])->name('tagsFromCategory');
 
 Route::resource('/services', App\Http\Controllers\ServiceController::class, [
     'names' => [

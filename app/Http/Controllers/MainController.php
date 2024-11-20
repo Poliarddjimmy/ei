@@ -36,4 +36,16 @@ class MainController extends Controller
     {
         return view('projects');
     }
+    
+    public function tagsFromCategory(Request $request)
+    {
+        $category = Category::find($request->category_id);
+        
+        if ($category) {
+            $tags = $category->tags;
+            return response()->json(['tags' => $tags]);
+        } else {
+            return response()->json(['message' => 'Category not found'], 404);
+        }
+    }
 }

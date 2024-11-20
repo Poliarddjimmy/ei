@@ -26,6 +26,7 @@ class StoreProjectRequest extends FormRequest
             'year' =>'required|string',
             'month' =>'required|string',
             'poster_url' =>'required|image',
+            'tag' =>'required|string',
         ];
     }
 }

@@ -33,7 +33,7 @@
     <link rel="manifest" href="{{ asset('/favicons/manifest.json') }}">
 
     <meta name="theme-color" content="#ffffff">
-    <script src="assets/js/config.js"></script>
+    <script src="/assets/js/config.js"></script>
     <script src="vendors/simplebar/simplebar.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -50,11 +50,11 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap"
         rel="stylesheet">
-    <link href="{{ asset('assets/dashboard/css/simplebar.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/dashboard/css/theme-rtl.min.css') }}" rel="stylesheet" id="style-rtl">
-    <link href="{{ asset('assets/dashboard/css/theme.min.css') }}" rel="stylesheet" id="style-default">
-    <link href="{{ asset('assets/dashboard/css/user-rtl.min.css') }}" rel="stylesheet" id="user-style-rtl">
-    <link href="{{ asset('assets/dashboard/css/user.min.css') }}" rel="stylesheet" id="user-style-default">
+    <link href="{{ asset('/assets/dashboard/css/simplebar.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/assets/dashboard/css/theme-rtl.min.css') }}" rel="stylesheet" id="style-rtl">
+    <link href="{{ asset('/assets/dashboard/css/theme.min.css') }}" rel="stylesheet" id="style-default">
+    <link href="{{ asset('/assets/dashboard/css/user-rtl.min.css') }}" rel="stylesheet" id="user-style-rtl">
+    <link href="{{ asset('/assets/dashboard/css/user.min.css') }}" rel="stylesheet" id="user-style-default">
 
     <script>
     var isRTL = JSON.parse(localStorage.getItem('isRTL'));
@@ -357,17 +357,17 @@
         </div>
     </main>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-    <script src="{{ asset('assets/dashboard/js/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/js/anchor.min.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/js/is.min.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/js/echarts.min.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/fontawesome/all.min.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/js/lodash.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('/assets/dashboard/js/popper.min.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/js/anchor.min.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/js/is.min.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/js/echarts.min.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/fontawesome/all.min.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/js/lodash.min.js') }}"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="{{ asset('assets/dashboard/js/list.min.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/js/theme.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/js/list.min.js') }}"></script>
+    <script src="{{ asset('/assets/dashboard/js/theme.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <!-- @jquery
     @toastr_js

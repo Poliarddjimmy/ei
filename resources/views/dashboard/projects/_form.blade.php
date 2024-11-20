@@ -35,10 +35,20 @@
     
     <div class="mb-3">
         <label for="category" class="form-label">Category</label>
-        <select class="form-control" name="category_id" id="category">
+        <select class="form-control" name="category_id" id="category" onchange="handleCategoryChange(this.value, 'tag{{$proId}}')">
             <option value="">Select Category</option>
             @foreach($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+    </div>
+    
+    <div class="mb-3">
+        <label for="tag" class="form-label">Tag</label>
+        <select class="form-control" name="tag" id="tag{{$proId}}">
+            <option value="">Select a tag</option>
+            @foreach($tags as $tag)
+                <option value="{{ $tag }}">{{ $tag }}</option>
             @endforeach
         </select>
     </div>
@@ -63,6 +73,57 @@
         </button>
     </div>
 </form>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+<script>
+    function handleCategoryChange(selectedValue, tag) {
+
+        // Ensure the DOM is fully loaded before attaching the event listener
+        const categoryId = selectedValue;
+        const tagSelect = $("#" + tag);
+        const allTags = <?php echo json_encode($tags); ?>;
+                
+        tagSelect.children().slice(1).remove();
+        
+        // check if tagSelect is ""
+        if (categoryId === "") {
+            allTags.forEach(function(tag) {
+                const option = document.createElement("option");
+                option.value = tag;
+                option.text = tag;
+                tagSelect.append(option);
+            });
+        } else {
+            // Ajax request
+            $.ajax({
+                url: "{{ route('tagsFromCategory') }}",
+                method: "GET",
+                data: {
+                    category_id: categoryId,
+                },
+                success: function(data) {
+                    // Ensure data is an array
+                    if (Array.isArray(data.tags)) {
+                        data.tags.forEach(function(tag) {
+                            const option = document.createElement("option");
+                            option.value = tag;
+                            option.text = tag;
+                            tagSelect.append(option);
+                        });
+                        console.log("Selected Category ID:", categoryId);
+                    } else {
+                        console.error("Unexpected response format:", data);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("Ajax request failed:", status, error);
+                }
+            });
+        }
+    
+    }
+</script>
 
 <script>
 
@@ -141,3 +202,4 @@
     });
 
 </script>
+

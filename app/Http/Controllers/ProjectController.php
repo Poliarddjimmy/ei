@@ -22,7 +22,7 @@ class ProjectController extends Controller
     
             return view('dashboard.projects.index', compact('projects', 'categories', 'tags'));
         } else {
-            $projects = Project::all();
+            $projects = Project::inRandomOrder()->get();
             return view('projects.index', compact('projects'));
         }
     }

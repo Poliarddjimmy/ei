@@ -10,7 +10,7 @@ class MainController extends Controller
 {
     public function welcome()
     {
-        $projects = Project::all();
+        $projects = Project::inRandomOrder()->get();
         $rProjects = Project::orderBy('created_at', 'desc')->inRandomOrder()->take(5)->get();
         return view('welcome', compact('projects', 'rProjects'));
     }

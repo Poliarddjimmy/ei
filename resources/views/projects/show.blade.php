@@ -21,7 +21,8 @@
                             </div>
                         </div>
                         <div class="portfolio-text">
-                            <a href="#"><h4>{{ $project->month }}<span>-</span>{{ $project->year }}</h4></a>
+                            <a href="javascript:void(0)"><h4>{{ $project->tag }}</h4></a>
+                            <a href="javascript:void(0)"><h4>{{ $project->month }}<span>-</span>{{ $project->year }}</h4></a>
                         </div>
                     </div>
                 </div>

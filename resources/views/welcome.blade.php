@@ -39,7 +39,7 @@
                         <div class="recent-content"></div>
                         <div class="recent-details">
                             <div class="recent-title text-uppercase">{{ $project->slug }}</div>
-                            <div class="recent-price">{{ $project->category->name }}</div>
+                            <div class="recent-price">{{ $project->tag }}</div>
                             <div class="house-details">{{ $project->month }}<span>-</span>{{ $project->year }}</div>
                         </div>
                         <div class="view-proper">View Details</div>

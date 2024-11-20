@@ -29,7 +29,12 @@
                                             <figure><img src="{{ asset('/storage/'.$project->poster_url) }}" alt="" style="height:250px;"></figure>
                                         </a>
                                     </div>
-                                </div>
+                                    
+                        <div class="portfolio-text">
+                            <a href="javascript:void(0)"><h4>{{ $project->tag }}</h4></a>
+                            <a href="javascript:void(0)"><h4>{{ $project->month }}<span>-</span>{{ $project->year }}</h4></a>
+                        </div>
+                                </div> 
                             @empty
                                 <div class="col-md-4 cons hover-effect">
                                     <div class="choos">No projects found.</div>

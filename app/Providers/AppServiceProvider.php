@@ -21,5 +21,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Toastr::useVite();
+        error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
     }
 }

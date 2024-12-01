@@ -269,7 +269,7 @@
         
         <script>
         var typed = new Typed('.typed', {
-            strings: ["House ^2000", "Apartment ^2000", "Plaza ^4000"],
+            strings: ["Wedding ^4000", "Wedding ^4000", "Baby Shower ^4000", "Graduation ^4000", "Birthday Party ^4000"],
             smartBackspace: false,
             loop: true,
             showCursor: true,

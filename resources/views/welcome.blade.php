@@ -20,7 +20,7 @@
                         <div class="welcome-text">
                             <h1 class="h1">Decor For
                                 <br class="d-md-none">
-                                <span class="typed border-bottom">House </span><span
+                                <span class="typed border-bottom"> </span><span
                                     class="typed-cursor typed-cursor--blink">|</span>
                             </h1>
                             <p class="mt-4">Our experience ensures that your projects will be done right and

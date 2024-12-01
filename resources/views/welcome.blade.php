@@ -1,6 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    .parallax-search.home-1 {
+      position: relative;
+      background: url("{{ asset('/assets/images/bg/bg-main-home.jpg') }}") no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed !important;
+      width: 100%;
+      height: 85vh;
+    }
+</style>
 <section id="hero-area" class="parallax-search overlay home-1" data-stellar-background-ratio="0.5">
     <div class="hero-main">
         <div class="container aos-init aos-animate" data-aos="zoom-in">
